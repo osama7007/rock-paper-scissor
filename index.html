@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>index</title>
+	</head>
+	<body>
+		<h2>
+			CPU is <strong style="color: red">red</strong> / you are
+			<strong style="color: blue">blue</strong>
+		</h2>
+		<div class="container">
+			<button value="1" onclick="result(this)">
+				<img class="rock" src="rock.png" />
+			</button>
+			<button value="2" onclick="result(this)">
+				<img class="paper" src="paper.jpg" />
+			</button>
+			<button value="3" onclick="result(this)">
+				<img class="scissor" src="scissor.png" />
+			</button>
+		</div>
+		<span></span>
+		<button onclick="reset()" class="reset">reset</button>
+
+		<style>
+			body {
+				height: 100vh;
+				background-color: rgb(230, 227, 222);
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+			.container {
+				margin: auto;
+				width: 80%;
+				height: 30%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			img {
+				width: 200px;
+				height: 200px;
+			}
+			button:hover {
+				box-shadow: rgba(0, 0, 255, 0.397) 0 0 5px 5px;
+			}
+			span {
+				width: 300px;
+				height: 30px;
+				font-size: 40px;
+				display: block;
+				margin: auto;
+				text-align: center;
+			}
+			.reset {
+				width: 150px;
+				height: 50px;
+				background-color: rgb(41, 148, 167);
+				color: rgb(255, 255, 255);
+				margin-bottom: 100px;
+			}
+			@media only screen and (max-width: 600px) {
+				.container {
+					margin: auto;
+					width: 50%;
+					height: 90vh;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					flex-wrap: wrap;
+				}
+				span {
+					width: 300px;
+					height: 30px;
+					font-size: 40px;
+					display: block;
+					margin: auto;
+					text-align: center;
+					margin-bottom: 10px;
+				}
+				.reset {
+					margin-top: 10px;
+				}
+				button {
+					margin: 5px;
+				}
+			}
+		</style>
+
+		<script src="js.js"></script>
+	</body>
+</html>
