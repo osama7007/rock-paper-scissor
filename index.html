@@ -8,27 +8,26 @@
 	</head>
 	<body>
 		<h2>
-			CPU is <strong style="color: red">red</strong> / you are
-			<strong style="color: blue">blue</strong>
+			CPU is <strong style="color: red">Red</strong>
 		</h2>
 		<div class="container">
 			<button value="1" onclick="result(this)">
-				<img class="rock" src="rock.png" />
+				<img class="rock" src="rock.jpg" />
 			</button>
 			<button value="2" onclick="result(this)">
-				<img class="paper" src="paper.jpg" />
+				<img class="paper" src="papper.png" />
 			</button>
 			<button value="3" onclick="result(this)">
 				<img class="scissor" src="scissor.png" />
 			</button>
 		</div>
 		<span></span>
-		<button onclick="reset()" class="reset">reset</button>
+		<button onclick="reset()" class="reset">Reset</button>
 
 		<style>
 			body {
 				height: 100vh;
-				background-color: rgb(230, 227, 222);
+				background: linear-gradient(180deg, rgba(0,0,0,.5) , rgba(0,0,0,1));
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
@@ -42,12 +41,20 @@
 				justify-content: space-between;
 				align-items: center;
 			}
+			h2{
+				color: white;
+			}
 			img {
 				width: 200px;
 				height: 200px;
 			}
+			button{
+				margin: 2px;
+			}
 			button:hover {
-				box-shadow: rgba(0, 0, 255, 0.397) 0 0 5px 5px;
+				box-shadow: lightskyblue 0 0 10px 1px;
+				transform: scale(1.1);
+				transition: .3s;
 			}
 			span {
 				width: 300px;
@@ -56,6 +63,7 @@
 				display: block;
 				margin: auto;
 				text-align: center;
+				color: white;
 			}
 			.reset {
 				width: 150px;
@@ -63,6 +71,10 @@
 				background-color: rgb(41, 148, 167);
 				color: rgb(255, 255, 255);
 				margin-bottom: 100px;
+				border-radius: 10px;
+				border: none;
+				font-weight: bold;
+				font-size: 20px;
 			}
 			@media only screen and (max-width: 600px) {
 				.container {
